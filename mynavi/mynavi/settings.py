@@ -18,7 +18,7 @@ DATABASE = {
     'drivername': 'postgres',
     'host': 'localhost',
     'port': '5432',
-    'username': 'dbuser',
+    'username': 'eric',
     'password': 'root',
     'database': 'seminavidb'
 }
