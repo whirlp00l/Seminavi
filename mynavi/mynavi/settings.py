@@ -14,6 +14,19 @@ BOT_NAME = 'mynavi'
 SPIDER_MODULES = ['mynavi.spiders']
 NEWSPIDER_MODULE = 'mynavi.spiders'
 
+DATABASE = {
+    'drivername': 'postgres',
+    'host': 'localhost',
+    'port': '5432',
+    'username': 'dbuser',
+    'password': 'root',
+    'database': 'seminavidb'
+}
+
+ITEM_PIPELINES = {
+    'mynavi.pipelines.MynaviPipeline': 300,
+}
+
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
 #USER_AGENT = 'mynavi (+http://www.yourdomain.com)'
@@ -61,9 +74,6 @@ NEWSPIDER_MODULE = 'mynavi.spiders'
 
 # Configure item pipelines
 # See http://scrapy.readthedocs.org/en/latest/topics/item-pipeline.html
-#ITEM_PIPELINES = {
-#    'mynavi.pipelines.SomePipeline': 300,
-#}
 
 # Enable and configure the AutoThrottle extension (disabled by default)
 # See http://doc.scrapy.org/en/latest/topics/autothrottle.html

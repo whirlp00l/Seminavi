@@ -7,8 +7,18 @@
 
 import scrapy
 
+class CompanyItem(scrapy.Item):
+	url = scrapy.Field()
+	detail = scrapy.Field()
+	name = scrapy.Field()
+	companyid = scrapy.Field()
 
-class MynaviItem(scrapy.Item):
-    # define the fields for your item here like:
-    # name = scrapy.Field()
-    pass
+
+class SeminarItem(scrapy.Item):
+	companyid = scrapy.Field()
+	name = scrapy.Field()
+	date = scrapy.Field()
+	time = scrapy.Field()
+	place = scrapy.Field()
+	target = scrapy.Field()
+	submit = scrapy.Field()
