@@ -22,7 +22,6 @@ class MynaviPipeline(object):
 			try:
 				session.add(seminar)
 				session.commit()
-				print "HEHEHEHHEHE!!!!"
 			except:
 				session.rollback()
 				raise
